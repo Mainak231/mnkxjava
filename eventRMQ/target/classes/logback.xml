@@ -1,0 +1,27 @@
+<configuration>
+	<!-- Console -->
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{YYYY-MM-DD HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<!-- File appender for RMQController -->
+	<appender name="RMQController_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/user-service.log</file>
+        <encoder>
+            <pattern>%d{YYYY-MM-DD HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <!-- Logger for RMQController -->
+    <logger name="com.mainak.eventRMQ.controller" level="INFO" additivity="false">
+        <appender-ref ref="RMQController_FILE" />
+    </logger>
+    
+    <!-- Root Logger -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+    
+</configuration>

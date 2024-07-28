@@ -1,0 +1,2 @@
+2024-07-210 10:56:43 [http-nio-8081-exec-1] INFO  c.m.e.controller.RMQController - Application is up
+2024-07-210 10:58:25 [http-nio-8081-exec-5] INFO  c.m.e.controller.RMQController - < ========= Calling producer ========= >
